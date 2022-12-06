@@ -1,0 +1,23 @@
+.search-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+h2 {
+    padding-bottom: 10px;
+}
+
+input {
+    width: 300px;
+    height: 40px;
+    border: solid 1px black;
+    border-radius: 20px;
+}
+
+.empty {
+    padding-top: 30px;
+    color: rgb(87, 86, 86);
+}
