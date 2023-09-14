@@ -7,7 +7,7 @@ function Search() {
     const [search, setSearch] = useState('');
     const [Mymeal, setMymeal] = useState();
     const searchCard = (evt) => {
-        if (evt.key == "Enter") {
+        if (evt.key === "Enter") {
             fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
             .then(res => res.json())
             .then(data => {
@@ -21,7 +21,7 @@ function Search() {
         <section className='search-container'>
             <h2>Search your recipe...</h2>
             <div>
-                <input onChange={(e) => setSearch(e.target.value)} value={search} onKeyPress={searchCard} type="search" className="search-input" placeholder="e.g.: meat, cake, potato...?"/>
+                <input onChange={(e) => setSearch(e.target.value)} value={search} onKeyDown={searchCard} type="search" className="search-input" placeholder="e.g.: meat, cake, potato...?"/>
             </div>
             <div className='main-card'>
                 {
